@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +23,10 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .card {
-            @apply bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-white/5 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5;
+            @apply bg-zinc-900/50 border border-white/5 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5;
         }
         .mailing-card {
-            @apply bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-white/5 rounded-2xl p-3 hover:border-accent/50 transition-all;
+            @apply bg-zinc-900 border border-white/5 rounded-2xl p-3 hover:border-accent/50 transition-all;
         }
         html { scroll-behavior: smooth; }
         
@@ -35,7 +35,7 @@
 
         /* --- ESTILOS PARA EL SCROLL AUTOMÁTICO DE MAILING --- */
         .mailing-img-container {
-            height: 350px; /* Altura de la ventana de visualización */
+            height: 350px; 
             overflow: hidden;
             position: relative;
             border-radius: 0.75rem;
@@ -48,11 +48,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            /* Animación suave de ida y vuelta */
             animation: scroll-vertical 20s linear infinite alternate;
         }
 
-        /* Pausar scroll al pasar el mouse */
         .mailing-card:hover .mailing-img-scrolling {
             animation-play-state: paused;
         }
@@ -63,23 +61,20 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 dark:bg-[#050505] text-slate-900 dark:text-slate-200 antialiased transition-colors duration-300">
+<body class="bg-[#050505] text-slate-200 antialiased transition-colors duration-300">
 
-    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#050505]/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-white/5">
+    <header class="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="img/LANDING_GLOSS.png" alt="Tomás Rudilla" class="w-10 h-10 rounded-full border-2 border-accent p-0.5 object-cover">
-                <span class="font-bold text-xl tracking-tighter text-slate-900 dark:text-white">Tomás <span class="text-accent">Rudilla</span></span>
+                <img src="img/Perfil.png" alt="Tomás Rudilla" class="w-10 h-10 rounded-full border-2 border-accent p-0.5 object-cover">
+                <span class="font-bold text-xl tracking-tighter text-white">Tomás <span class="text-accent">Rudilla</span></span>
             </div>
             <nav class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest opacity-60">
                 <a href="#proyectos" class="hover:text-accent transition">Proyectos</a>
                 <a href="#mailing" class="hover:text-accent transition">Mailing</a>
                 <a href="#contacto" class="hover:text-accent transition">Contacto</a>
             </nav>
-            <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:text-accent transition-all">
-                <i data-lucide="moon" id="moon-icon" class="w-5 h-5 hidden"></i>
-                <i data-lucide="sun" id="sun-icon" class="w-5 h-5 hidden text-yellow-500"></i>
-            </button>
+            <div class="w-10"></div> 
         </div>
     </header>
 
@@ -88,21 +83,21 @@
         <section class="flex flex-col md:flex-row items-center gap-12 mb-40">
             <div class="flex-1 text-center md:text-left">
                 <div class="inline-block px-3 py-1 mb-6 text-xs font-bold uppercase tracking-widest bg-accent/10 text-accent rounded-full">Fullstack Developer</div>
-                <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none tracking-tighter text-slate-900 dark:text-white">
+                <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none tracking-tighter text-white">
                     Desarrollo <br> <span class="text-accent">Web.</span>
                 </h1>
-                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-xl mb-10 leading-relaxed font-medium">
+                <p class="text-xl text-slate-400 max-w-xl mb-10 leading-relaxed font-medium">
                     Especialista en sistemas escalables y automatización de procesos para marcas globales y startups.
                 </p>
                 <div class="flex justify-center md:justify-start gap-4">
                     <a href="#contacto" class="bg-accent text-white px-8 py-4 rounded-full font-bold hover:shadow-lg hover:shadow-accent/30 transition-all">Contactame</a>
-                    <a href="https://github.com/tu-usuario" target="_blank" class="p-4 border-2 border-slate-200 dark:border-white/10 rounded-full hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
+                    <a href="https://github.com/tu-usuario" target="_blank" class="p-4 border-2 border-white/10 rounded-full hover:bg-white/5 transition-all">
                         <i data-lucide="github" class="w-6 h-6"></i>
                     </a>
                 </div>
             </div>
             <div class="w-64 h-64 md:w-80 md:h-80 relative">
-                <img src="img/LANDING_GLOSS.png" alt="Tomás Rudilla" class="rounded-[3rem] shadow-2xl transition-transform duration-500 border-4 border-white dark:border-[#0a0a0a] object-cover w-full h-full">
+                <img src="img/Perfil.png" alt="Tomás Rudilla" class="rounded-[3rem] shadow-2xl transition-transform duration-500 border-4 border-[#0a0a0a] object-cover w-full h-full">
             </div>
         </section>
 
@@ -123,52 +118,51 @@
         </section>
 
         <section id="proyectos" class="mb-40">
-            <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-12 text-slate-900 dark:text-white">Proyectos Reales</h2>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-12 text-white">Proyectos Reales</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                
                 <div class="card group">
-                    <div class="w-full h-96 bg-slate-100 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
+                    <div class="w-full h-96 bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
                         <img src="img/AILOG.png" alt="AILOG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-accent/10 text-accent rounded uppercase">PHP / Snowflake / n8n</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">AILOG Ecosystem</h4>
-                    <button onclick="openModal('ailog')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">AILOG Ecosystem</h4>
+                    <button onclick="openModal('ailog')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
 
                 <div class="card group">
-                    <div class="w-full h-96 bg-slate-100 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
+                    <div class="w-full h-96 bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
                         <img src="img/RENTMATCH.png" alt="RentMatch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-indigo-500/10 text-indigo-500 rounded uppercase">React / PHP / JS</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">RentMatch</h4>
-                    <button onclick="openModal('rentmatch')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">RentMatch</h4>
+                    <button onclick="openModal('rentmatch')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
 
                 <div class="card group">
-                    <div class="w-full h-96 bg-slate-100 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
+                    <div class="w-full h-96 bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
                         <img src="img/LANDING_GLOSS.png" alt="Landing Gloss" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-accent/10 text-accent rounded uppercase">HTML / CSS / Design</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Landing Gloss</h4>
-                    <button onclick="openModal('landinggloss')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">Landing Gloss</h4>
+                    <button onclick="openModal('landinggloss')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
 
                 <div class="card group">
-                    <div class="w-full h-96 bg-slate-100 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
+                    <div class="w-full h-96 bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
                         <img src="img/MATRIX.png" alt="Matrix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-pink-500/10 text-pink-500 rounded uppercase">HTML / CSS / JS</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Matrix (L'Oréal)</h4>
-                    <button onclick="openModal('matrix')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">Matrix (L'Oréal)</h4>
+                    <button onclick="openModal('matrix')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
 
                 <div class="card group">
@@ -178,106 +172,96 @@
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-emerald-500/10 text-emerald-500 rounded uppercase">PHP / MySQL / JS</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">MyProLook</h4>
-                    <button onclick="openModal('myprolook')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">MyProLook</h4>
+                    <button onclick="openModal('myprolook')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
 
                 <div class="card group">
-                    <div class="w-full h-96 bg-slate-100 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
+                    <div class="w-full h-96 bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
                         <img src="img/SCANTHEWINE.png" alt="Scanthewine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-red-500/10 text-red-500 rounded uppercase">Supabase / PHP / JS</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Scanthewine</h4>
-                    <button onclick="openModal('scanthewine')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">Scanthewine</h4>
+                    <button onclick="openModal('scanthewine')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
 
                 <div class="card group">
-                    <div class="w-full h-96 bg-slate-100 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden flex items-center justify-center">
+                    <div class="w-full h-96 bg-zinc-800 rounded-2xl mb-6 overflow-hidden flex items-center justify-center">
                         <img src="img/MULTISPORTARENA.png" alt="Multisport Arena" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-red-500/10 text-red-500 rounded uppercase">Supabase / PHP / JS</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Multisport Arena</h4>
-                    <button onclick="openModal('multisport')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">Multisport Arena</h4>
+                    <button onclick="openModal('multisport')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
 
                 <div class="card group">
-                    <div class="w-full h-96 bg-slate-100 dark:bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
+                    <div class="w-full h-96 bg-zinc-800 rounded-2xl mb-6 overflow-hidden">
                         <img src="img/WORKSPOT.png" alt="Workspot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-[10px] font-bold px-2 py-1 bg-indigo-400/10 text-indigo-400 rounded uppercase">Bootstrap / PHP / MySQL</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Workspot</h4>
-                    <button onclick="openModal('workspot')" class="w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
+                    <h4 class="text-2xl font-bold mb-4 text-white">Workspot</h4>
+                    <button onclick="openModal('workspot')" class="w-full py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm hover:bg-accent hover:text-white transition-all">De qué se trata</button>
                 </div>
-
             </div>
         </section>
 
         <section id="mailing" class="mb-40">
-            <h2 class="text-3xl font-black mb-10 tracking-tighter flex items-center gap-3 text-slate-900 dark:text-white"><i data-lucide="mail" class="text-accent"></i> Mailing Works</h2>
+            <h2 class="text-3xl font-black mb-10 tracking-tighter flex items-center gap-3 text-white"><i data-lucide="mail" class="text-accent"></i> Mailing Works</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
-                        <img src="img/MAILING-BITS0ANO.png" alt="Campaña Matrix" class="mailing-img-scrolling">
+                        <img src="img/MAILING-BITS0ANO.png" alt="Campaña Bitso" class="mailing-img-scrolling">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">Campaña Bitso 2025</h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">Campaña Bitso 2025</h5>
                 </div>
-                
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
                         <img src="img/MAILING-ARMANI.png" alt="Newsletter" class="mailing-img-scrolling" style="animation-delay: -3s;">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">Armani Acqua Di Gio </h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">Armani Acqua Di Gio </h5>
                 </div>
-
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
                         <img src="img/MAILING-LANCOME1.png" alt="Launch" class="mailing-img-scrolling" style="animation-delay: -6s;">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">Lancome 20%OFF & Gifts</h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">Lancome 20%OFF & Gifts</h5>
                 </div>
-
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
                         <img src="img/MAILING-LANCOME2.png" alt="Event" class="mailing-img-scrolling" style="animation-delay: -9s;">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">Lancome Bundles</h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">Lancome Bundles</h5>
                 </div>
-
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
                         <img src="img/MAILING-SCANTHEWINE.png" alt="Promo" class="mailing-img-scrolling" style="animation-delay: -12s;">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">Announcement Scan The Wine</h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">Announcement Scan The Wine</h5>
                 </div>
-
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
                         <img src="img/MAILING-YSL.png" alt="Internal" class="mailing-img-scrolling" style="animation-delay: -15s;">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">YSL Love Shine</h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">YSL Love Shine</h5>
                 </div>
-
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
                         <img src="img/MAILING-POLO.png" alt="Greetings" class="mailing-img-scrolling" style="animation-delay: -18s;">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">Ralph Lauren Polo 67</h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">Ralph Lauren Polo 67</h5>
                 </div>
-
                 <div class="mailing-card group">
                     <div class="mailing-img-container mb-3">
                         <img src="img/MAILING-LANCOME3.png" alt="Special" class="mailing-img-scrolling" style="animation-delay: -1s;">
                     </div>
-                    <h5 class="font-bold text-xs truncate uppercase text-slate-900 dark:text-white text-center">Lancome Lash Idole</h5>
+                    <h5 class="font-bold text-xs truncate uppercase text-white text-center">Lancome Lash Idole</h5>
                 </div>
-
             </div>
         </section>
 
@@ -301,18 +285,18 @@
     </main>
 
     <div id="project-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md hidden opacity-0 transition-all">
-        <div class="modal-content bg-white dark:bg-zinc-900 w-full max-w-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 scale-95 transition-all">
+        <div class="modal-content bg-zinc-900 w-full max-w-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 scale-95 transition-all">
             <div class="p-8">
                 <div class="flex justify-between items-start mb-6">
-                    <h3 id="modal-title" class="text-3xl font-black tracking-tighter text-slate-900 dark:text-white">Título</h3>
-                    <button onclick="closeModal()" class="p-2 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all">
+                    <h3 id="modal-title" class="text-3xl font-black tracking-tighter text-white">Título</h3>
+                    <button onclick="closeModal()" class="p-2 rounded-full bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all">
                         <i data-lucide="x" class="w-6 h-6"></i>
                     </button>
                 </div>
                 <div class="space-y-6">
                     <div id="modal-tech" class="flex flex-wrap gap-2 text-accent font-bold uppercase text-[10px]"></div>
-                    <p id="modal-description" class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"></p>
-                    <div class="pt-6 border-t border-slate-100 dark:border-white/5 flex gap-4">
+                    <p id="modal-description" class="text-lg text-slate-400 leading-relaxed"></p>
+                    <div class="pt-6 border-t border-white/5 flex gap-4">
                         <a id="modal-link" href="#" target="_blank" class="bg-accent text-white px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 hover:opacity-90 transition">
                             Visitar Sitio <i data-lucide="external-link" class="w-4 h-4"></i>
                         </a>
@@ -368,20 +352,6 @@
 
         window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
         modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
-
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const setDark = (isDark) => {
-            document.documentElement.classList.toggle('dark', isDark);
-            document.getElementById('sun-icon').classList.toggle('hidden', !isDark);
-            document.getElementById('moon-icon').classList.toggle('hidden', isDark);
-        }
-        const savedTheme = localStorage.getItem('theme');
-        setDark(savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches));
-        themeToggleBtn.addEventListener('click', () => {
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'light' : 'dark');
-            setDark(!isDark);
-        });
     </script>
 </body>
 </html>
